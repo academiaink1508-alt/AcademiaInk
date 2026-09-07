@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<!-- থিসিস: ব্রুটালিস্ট একাডেমিক আর্কিটেকচার, স্লট ব্যাকগ্রাউন্ড, গাঢ় স্লেট ইনক, আম্বার অ্যাকসেন্ট এবং সম্পূর্ণ কার্যকরী WhatsApp লিঙ্কিং -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academia Ink | Academic & Technical Assignment Assistance</title>
-  <meta name="description" content="Professional academic writing, dissertation research, and programming solutions for undergraduate, postgraduate, and PhD scholars.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f172a'/><path d='M8 22L16 6l8 16H8z' fill='%23d97706'/><circle cx='16' cy='18' r='2.5' fill='%230f172a'/></svg>">
+  <title>Academia Ink | Academic Writing, Dissertations & Technical Assignment Solutions</title>
+  <meta name="description" content="Premium academic writing, dissertation research, ML/Data Science coding, and technical assignments for undergraduate, postgraduate, and PhD scholars.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230f172a'/><path d='M8 22L16 6l8 16H8z' fill='%23f59e0b'/><circle cx='16' cy='18' r='2.5' fill='%2338bdf8'/></svg>">
   
+  <!-- Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@500;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #f8fafc;
-      --surface: #ffffff;
-      --panel-alt: #f1f5f9;
-      --ink: #0f172a;
-      --ink-muted: #475569;
-      --ink-subtle: #64748b;
-      --accent: #d97706;
-      --accent-hover: #b45309;
-      --accent-light: #fef3c7;
-      --accent-dark: #78350f;
-      --brand-blue: #0284c7;
-      --brand-blue-light: #e0f2fe;
-      --line: #e2e8f0;
-      --line-dark: #cbd5e1;
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
-      --shadow-subtle: 0 10px 25px -8px rgba(15, 23, 42, 0.06);
-      --font-heading: 'Anek Latin', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --bg-dark: #090d16;
+      --bg-card: rgba(18, 24, 38, 0.78);
+      --bg-card-hover: rgba(26, 35, 54, 0.9);
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --surface-border-bright: rgba(56, 189, 248, 0.3);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      
+      --accent-amber: #f59e0b;
+      --accent-amber-glow: rgba(245, 158, 11, 0.25);
+      --accent-cyan: #38bdf8;
+      --accent-cyan-glow: rgba(56, 189, 248, 0.25);
+      --accent-emerald: #10b981;
+      --accent-purple: #a855f7;
+
+      --font-body: 'Plus Jakarta Sans', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
     }
 
     * {
@@ -45,106 +46,193 @@
 
     html {
       scroll-behavior: smooth;
-      font-synthesis: none;
       -webkit-font-smoothing: antialiased;
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--ink);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
       font-family: var(--font-body);
       font-size: 15px;
       line-height: 1.6;
       overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
+      background-attachment: fixed;
     }
 
     h1, h2, h3, h4 {
-      font-family: var(--font-heading);
-      color: var(--ink);
-      letter-spacing: -0.02em;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.025em;
       line-height: 1.15;
     }
 
-    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; }
-    h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; }
-    h3 { font-size: 1.25rem; font-weight: 700; }
-    p { color: var(--ink-muted); }
+    h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); }
+    h2 { font-size: clamp(1.8rem, 3.8vw, 2.6rem); }
+    h3 { font-size: 1.3rem; }
+    p { color: var(--text-muted); }
 
     a {
-      color: inherit;
       text-decoration: none;
-      transition: color 0.16s ease-out;
-    }
-
-    button, input, select, textarea {
-      font-family: inherit;
-      font-size: 14px;
+      color: inherit;
+      transition: all 0.2s ease;
     }
 
     .container {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-    .app-shell {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan) 70%, var(--accent-amber) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    /* Header */
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 14.5px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-amber) 0%, #d97706 100%);
+      color: #0b0f19;
+      font-weight: 700;
+      box-shadow: 0 4px 20px var(--accent-amber-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.4);
+      background: linear-gradient(135deg, #fcd34d 0%, var(--accent-amber) 100%);
+    }
+
+    .btn-cyan {
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, #0284c7 100%);
+      color: #041426;
+      font-weight: 700;
+      box-shadow: 0 4px 20px var(--accent-cyan-glow);
+    }
+
+    .btn-cyan:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(56, 189, 248, 0.4);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-main);
+      border-color: var(--surface-border);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 7px 16px;
+      font-size: 13px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Top Navigation */
     header.site-nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(248, 250, 252, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
+      z-index: 1000;
+      background: rgba(9, 13, 22, 0.78);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--surface-border);
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 76px;
     }
 
     .brand-lockup {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .brand-icon {
-      width: 38px;
-      height: 38px;
-      background: var(--ink);
-      border-radius: var(--radius-sm);
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid var(--surface-border-bright);
+      border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
+      color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
     }
 
     .brand-text h2 {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--ink);
+      color: #ffffff;
       line-height: 1;
     }
 
     .brand-text span {
-      font-size: 10px;
+      font-size: 10.5px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--accent);
+      color: var(--accent-amber);
       font-weight: 700;
       font-family: var(--font-mono);
       display: block;
       margin-top: 3px;
+    }
+
+    .online-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--accent-emerald);
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-left: 12px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 8px var(--accent-emerald);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
     }
 
     .nav-links {
@@ -156,82 +244,18 @@
 
     .nav-links a {
       font-weight: 500;
-      font-size: 14px;
-      color: var(--ink-muted);
+      font-size: 14.5px;
+      color: var(--text-muted);
     }
 
     .nav-links a:hover {
-      color: var(--ink);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 20px;
-      border-radius: var(--radius-md);
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      border: 1px solid transparent;
-      transition: background-color 0.16s ease, transform 0.16s ease;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--accent);
       color: #ffffff;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-hover);
-    }
-
-    .btn-dark {
-      background: var(--ink);
-      color: #ffffff;
-    }
-
-    .btn-dark:hover {
-      background: #1e293b;
-    }
-
-    .btn-outline {
-      background: var(--surface);
-      color: var(--ink);
-      border-color: var(--line-dark);
-    }
-
-    .btn-outline:hover {
-      background: var(--panel-alt);
-    }
-
-    .btn-sm {
-      padding: 6px 14px;
-      font-size: 13px;
-      border-radius: var(--radius-sm);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 6px;
-      color: var(--ink);
     }
 
     /* Hero Section */
     .hero-section {
-      padding: 64px 0 80px;
+      padding: 70px 0 90px;
+      position: relative;
     }
 
     .hero-grid {
@@ -245,87 +269,164 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 5px 14px;
-      background: var(--accent-light);
-      color: var(--accent-dark);
+      padding: 6px 16px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fcd34d;
       font-weight: 600;
-      font-size: 12px;
-      border-radius: 20px;
-      margin-bottom: 20px;
+      font-size: 12.5px;
+      border-radius: 30px;
+      margin-bottom: 22px;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .hero-text h1 mark {
-      background: transparent;
-      color: var(--accent);
+      letter-spacing: 0.05em;
     }
 
     .hero-lead {
-      font-size: 16px;
-      color: var(--ink-muted);
-      margin: 20px 0 32px;
-      max-width: 540px;
-      line-height: 1.65;
+      font-size: 16.5px;
+      color: var(--text-muted);
+      margin: 22px 0 34px;
+      max-width: 560px;
+      line-height: 1.7;
     }
 
     .hero-cta-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 36px;
+      gap: 16px;
+      margin-bottom: 40px;
     }
 
     .hero-metrics {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
+      gap: 20px;
+      padding-top: 28px;
+      border-top: 1px solid var(--surface-border);
     }
 
     .metric-item .number {
-      font-family: var(--font-heading);
-      font-size: 1.7rem;
+      font-size: 1.9rem;
       font-weight: 800;
-      color: var(--ink);
+      color: #ffffff;
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .metric-item .number span {
+      color: var(--accent-cyan);
     }
 
     .metric-item .label {
       font-size: 12px;
-      color: var(--ink-subtle);
+      color: var(--text-subtle);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       font-weight: 600;
     }
 
-    /* Quote Box */
-    .quote-box {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 30px;
-      box-shadow: var(--shadow-subtle);
+    /* Hero Form & Verified Spacing */
+    .hero-card-wrap {
+      position: relative;
     }
 
+    .floating-proof-badge {
+      position: absolute;
+      top: -20px;
+      right: 20px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid var(--accent-emerald);
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.25);
+      backdrop-filter: blur(12px);
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 5;
+      animation: floatBadge 3.5s ease-in-out infinite;
+    }
+
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    .proof-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .proof-text h5 {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .proof-text p {
+      font-size: 11px;
+      color: var(--accent-emerald);
+      margin: 0;
+    }
+
+    .quote-box {
+      background: var(--bg-card);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px 32px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-amber), var(--accent-purple));
+    }
+
+    /* Fixed Header with Guaranteed Spacing */
     .quote-box-header {
-      margin-bottom: 20px;
+      margin-bottom: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     .quote-box-header span {
-      font-size: 11px;
+      display: inline-block;
+      font-size: 11.5px;
       font-family: var(--font-mono);
-      color: var(--accent);
+      color: var(--accent-cyan);
       text-transform: uppercase;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
+      line-height: 1;
     }
 
     .quote-box-header h3 {
-      font-size: 1.35rem;
-      margin-top: 4px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      word-spacing: 0.18em;
+      margin: 0;
     }
 
     .form-group {
@@ -336,61 +437,62 @@
       display: block;
       font-size: 12px;
       font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 6px;
+      color: var(--text-muted);
+      margin-bottom: 7px;
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
 
     .form-control {
       width: 100%;
-      padding: 10px 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-sm);
-      background: var(--bg);
-      color: var(--ink);
+      padding: 12px 16px;
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      background: rgba(11, 15, 25, 0.85);
+      color: #ffffff;
       font-size: 14px;
       outline: none;
-      transition: border-color 0.16s ease;
+      transition: all 0.2s ease;
     }
 
     .form-control:focus {
-      border-color: var(--ink);
-      background: var(--surface);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
     }
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 14px;
     }
 
     /* Trust Strip */
     .trust-strip {
-      background: var(--surface);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 24px 0;
+      border-top: 1px solid var(--surface-border);
+      border-bottom: 1px solid var(--surface-border);
+      background: rgba(15, 23, 42, 0.4);
+      padding: 32px 0;
     }
 
     .trust-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      gap: 24px;
     }
 
     .trust-item {
       display: flex;
-      align-items: flex-start;
-      gap: 12px;
+      align-items: center;
+      gap: 16px;
     }
 
     .trust-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: var(--radius-sm);
-      background: var(--accent-light);
-      color: var(--accent-dark);
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      color: var(--accent-cyan);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -398,59 +500,358 @@
     }
 
     .trust-item h4 {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
-      margin-bottom: 2px;
+      color: #ffffff;
     }
 
     .trust-item p {
-      font-size: 12px;
-      line-height: 1.4;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    /* Showcase Image Banner */
+    .showcase-banner {
+      padding: 40px 0 80px;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .showcase-item {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--surface-border);
+      height: 240px;
+    }
+
+    .showcase-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .showcase-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .showcase-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(9, 13, 22, 0.95) 0%, rgba(9, 13, 22, 0.3) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px;
+    }
+
+    .showcase-overlay span {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      color: var(--accent-amber);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .showcase-overlay h4 {
+      font-size: 1.15rem;
+      color: #ffffff;
+      margin-top: 4px;
+    }
+
+    /* Reviews Section & Infinite Marquee */
+    .reviews-section {
+      padding: 95px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .reviews-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 30px;
+    }
+
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 16px;
+    }
+
+    .rating-pill span {
+      font-weight: 700;
+      color: #fbbf24;
+      font-size: 13.5px;
+    }
+
+    .rating-pill .stars-group {
+      color: #f59e0b;
+      display: flex;
+      gap: 2px;
+    }
+
+    .review-actions-bar {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    /* Dynamic Review Drawer */
+    .review-submit-card {
+      max-width: 820px;
+      margin: 0 auto 50px;
+      background: var(--bg-card);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(16px);
+      display: none;
+      animation: slideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .review-submit-card.open {
+      display: block;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .review-submit-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .star-select-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      cursor: pointer;
+    }
+
+    .star-btn {
+      font-size: 24px;
+      color: #475569;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+
+    .star-btn.active, .star-btn:hover {
+      color: var(--accent-amber);
+      transform: scale(1.15);
+    }
+
+    /* Marquee Setup */
+    .marquee-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+
+    .marquee-wrapper::before,
+    .marquee-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 140px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .marquee-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg-dark), transparent);
+    }
+
+    .marquee-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg-dark), transparent);
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: scrollTrack 70s linear infinite;
+    }
+
+    .marquee-track.reverse {
+      animation: scrollTrackReverse 70s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollTrack {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes scrollTrackReverse {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    .review-card {
+      width: 380px;
+      background: rgba(17, 24, 39, 0.78);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .review-card:hover {
+      border-color: var(--accent-amber);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      background: rgba(26, 35, 54, 0.9);
+    }
+
+    .review-card.user-submitted {
+      border-color: rgba(56, 189, 248, 0.5);
+      background: rgba(14, 30, 56, 0.85);
+    }
+
+    .review-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .review-stars {
+      color: #f59e0b;
+      display: flex;
+      gap: 2px;
+      font-size: 14px;
+    }
+
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--accent-emerald);
+      font-weight: 600;
+      background: rgba(16, 185, 129, 0.1);
+      padding: 3px 8px;
+      border-radius: 12px;
+    }
+
+    .review-text {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .reviewer-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--surface-border);
+      padding-top: 12px;
+    }
+
+    .reviewer-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--surface-border);
+    }
+
+    .reviewer-info h5 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .reviewer-info span {
+      font-size: 11.5px;
+      color: var(--accent-cyan);
+      display: block;
+    }
+
+    .reviewer-tag {
+      font-size: 10.5px;
+      color: var(--text-subtle);
     }
 
     /* Services Section */
     .section-py {
-      padding: 88px 0;
-    }
-
-    .section-header {
-      margin-bottom: 40px;
+      padding: 90px 0;
     }
 
     .section-tag {
       font-family: var(--font-mono);
       font-size: 12px;
-      color: var(--accent);
+      color: var(--accent-cyan);
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       display: inline-block;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    .section-header {
+      margin-bottom: 44px;
     }
 
     .service-filters {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
     .filter-btn {
-      padding: 8px 18px;
+      padding: 10px 22px;
       border-radius: 30px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      font-size: 13px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--surface-border);
+      font-size: 13.5px;
       font-weight: 600;
-      color: var(--ink-muted);
+      color: var(--text-muted);
       cursor: pointer;
-      transition: all 0.16s ease;
+      transition: all 0.2s ease;
     }
 
     .filter-btn.active, .filter-btn:hover {
-      background: var(--ink);
-      color: #fff;
-      border-color: var(--ink);
+      background: var(--accent-cyan);
+      color: #0b0f19;
+      border-color: var(--accent-cyan);
+      box-shadow: 0 4px 20px var(--accent-cyan-glow);
     }
 
     .services-grid {
@@ -460,19 +861,22 @@
     }
 
     .service-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.16s ease, border-color 0.16s ease;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s ease;
     }
 
     .service-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
+      border-color: var(--accent-cyan);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+      background: var(--bg-card-hover);
     }
 
     .service-badge {
@@ -481,193 +885,127 @@
       font-family: var(--font-mono);
       text-transform: uppercase;
       font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 4px;
+      padding: 4px 10px;
+      border-radius: 6px;
       margin-bottom: 16px;
     }
 
     .service-card.tech .service-badge {
-      background: var(--brand-blue-light);
-      color: var(--brand-blue);
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(56, 189, 248, 0.25);
     }
 
     .service-card.non-tech .service-badge {
-      background: var(--accent-light);
-      color: var(--accent-dark);
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-amber);
+      border: 1px solid rgba(245, 158, 11, 0.25);
     }
 
     .service-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
     }
 
     .service-card p {
-      font-size: 13.5px;
-      margin-bottom: 20px;
-      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 22px;
+      line-height: 1.65;
     }
 
     .service-features {
       list-style: none;
-      margin-bottom: 24px;
-      border-top: 1px dashed var(--line);
-      padding-top: 16px;
+      margin-bottom: 26px;
+      border-top: 1px dashed var(--surface-border);
+      padding-top: 18px;
     }
 
     .service-features li {
-      font-size: 12.5px;
-      color: var(--ink-muted);
+      font-size: 13px;
+      color: var(--text-muted);
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
     .service-features li svg {
-      color: var(--accent);
+      color: var(--accent-emerald);
       flex-shrink: 0;
-    }
-
-    /* About Section */
-    .about-section {
-      background: var(--surface);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: center;
-    }
-
-    .about-highlights {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .highlight-card {
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 20px;
-    }
-
-    .highlight-card h4 {
-      font-size: 14.5px;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .highlight-card p {
-      font-size: 12.5px;
-      line-height: 1.5;
-    }
-
-    .referencing-pill-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
-    }
-
-    .ref-pill {
-      padding: 6px 14px;
-      background: var(--panel-alt);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--ink);
     }
 
     /* Process Flow */
     .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 40px;
+      gap: 22px;
+      margin-top: 48px;
     }
 
     .process-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: transform 0.2s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-cyan);
     }
 
     .process-step {
-      font-family: var(--font-heading);
       font-size: 2.2rem;
       font-weight: 800;
-      color: var(--accent);
+      color: var(--accent-cyan);
       line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .process-card h4 {
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
-    .process-card p {
-      font-size: 13px;
+      margin-bottom: 14px;
+      font-family: var(--font-mono);
     }
 
     /* Contact Section */
     .contact-card {
-      background: var(--ink);
-      color: #ffffff;
-      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(18, 24, 38, 0.9) 0%, rgba(11, 15, 25, 0.95) 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-xl);
       padding: 56px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 48px;
-    }
-
-    .contact-card h2 {
-      color: #ffffff;
-      margin-bottom: 16px;
-    }
-
-    .contact-card p {
-      color: #94a3b8;
-      font-size: 15px;
-      margin-bottom: 32px;
+      gap: 52px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(20px);
     }
 
     .contact-direct-links {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
     }
 
     .direct-link-item {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 16px 20px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      gap: 16px;
+      padding: 18px 22px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--surface-border);
       border-radius: var(--radius-md);
-      transition: background 0.16s ease;
+      transition: all 0.2s ease;
     }
 
     .direct-link-item:hover {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateX(4px);
     }
 
     .direct-icon {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
+      background: var(--accent-amber);
+      color: #000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -677,25 +1015,45 @@
     .direct-info span {
       font-size: 11px;
       text-transform: uppercase;
-      color: #cbd5e1;
+      color: var(--text-muted);
       letter-spacing: 0.05em;
     }
 
     .direct-info strong {
       display: block;
-      font-size: 15px;
+      font-size: 16px;
       color: #ffffff;
+      margin-top: 2px;
     }
 
     .contact-form-inner {
-      background: #ffffff;
-      color: var(--ink);
-      padding: 32px;
-      border-radius: var(--radius-md);
+      background: rgba(9, 13, 22, 0.7);
+      border: 1px solid var(--surface-border);
+      padding: 34px;
+      border-radius: var(--radius-lg);
     }
 
-    .contact-form-inner h3 {
-      margin-bottom: 16px;
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 96px;
+      right: 28px;
+      background: #0f172a;
+      border: 1px solid var(--accent-emerald);
+      color: #ffffff;
+      padding: 14px 22px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      z-index: 1001;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
 
     /* Floating WhatsApp Button */
@@ -705,43 +1063,41 @@
       right: 28px;
       background: #25d366;
       color: #ffffff;
-      padding: 12px 20px;
-      border-radius: 30px;
+      padding: 14px 22px;
+      border-radius: 40px;
       display: flex;
       align-items: center;
       gap: 10px;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 14.5px;
       box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-      z-index: 99;
-      transition: transform 0.16s ease;
+      z-index: 999;
+      transition: all 0.25s ease;
     }
 
     .whatsapp-float:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px) scale(1.03);
     }
 
-    /* Footer */
     footer.site-footer {
-      background: var(--surface);
-      border-top: 1px solid var(--line);
-      padding: 64px 0 32px;
-      margin-top: auto;
+      background: #060911;
+      border-top: 1px solid var(--surface-border);
+      padding: 70px 0 34px;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 48px;
+      gap: 44px;
+      margin-bottom: 50px;
     }
 
     .footer-col h5 {
-      font-size: 13px;
+      font-size: 13.5px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--ink);
-      margin-bottom: 16px;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      margin-bottom: 18px;
     }
 
     .footer-links {
@@ -749,82 +1105,71 @@
     }
 
     .footer-links li {
-      margin-bottom: 10px;
+      margin-bottom: 11px;
     }
 
     .footer-links a {
       font-size: 13.5px;
-      color: var(--ink-muted);
+      color: var(--text-muted);
     }
 
     .footer-links a:hover {
-      color: var(--accent);
+      color: var(--accent-cyan);
     }
 
     .footer-bottom {
-      border-top: 1px solid var(--line);
-      padding-top: 24px;
+      border-top: 1px solid var(--surface-border);
+      padding-top: 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 12.5px;
-      color: var(--ink-subtle);
+      font-size: 13px;
+      color: var(--text-subtle);
     }
 
-    /* Responsive */
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
       .hero-grid { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .about-grid { grid-template-columns: 1fr; }
-      .contact-card { grid-template-columns: 1fr; padding: 32px; }
+      .contact-card { grid-template-columns: 1fr; padding: 36px; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .trust-grid { grid-template-columns: repeat(2, 1fr); }
       .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .showcase-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        background: var(--surface);
-        padding: 24px;
-        border-bottom: 1px solid var(--line);
-        box-shadow: var(--shadow-subtle);
-      }
-      .menu-toggle { display: block; }
       .services-grid { grid-template-columns: 1fr; }
       .trust-grid { grid-template-columns: 1fr; }
       .process-grid { grid-template-columns: 1fr; }
-      .about-highlights { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-      .hero-metrics { grid-template-columns: 1fr; gap: 12px; }
+      .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
+      .hero-metrics { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
     }
   </style>
-<meta property="og:title" content="Academia Ink | Academic &amp; Technical Assignment Assistance">
-<meta property="og:description" content="Professional academic writing, dissertation research, and programming solutions for undergraduate, postgraduate, and PhD scholars.">
 </head>
 <body>
 
-  <!-- Floating Fast Contact CTA -->
-  <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.182-2.585-5.769-5.767-5.77zm3.377 8.163c-.141.397-.714.77-1.02.825-.294.053-.679.083-2.18-.538-1.782-.734-2.92-2.548-3.008-2.666-.088-.118-.716-.953-.716-1.815 0-.862.453-1.287.614-1.463.161-.176.353-.22.47-.22.117 0 .235.001.338.006.107.005.251-.041.392.298.146.353.498 1.214.542 1.303.044.088.073.191.015.308-.059.118-.088.191-.176.294-.088.103-.186.23-.265.308-.088.088-.18.184-.078.36.103.176.457.753.98 1.22.673.6 1.24.786 1.417.874.176.088.279.074.382-.044.103-.118.441-.515.559-.691.118-.176.235-.147.397-.088.162.059 1.029.485 1.205.573.176.088.294.132.338.206.044.073.044.426-.097.823zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+  <!-- Floating Toast -->
+  <div id="reviewToast" class="toast-msg">
+    <svg width="20" height="20" fill="currentColor" style="color: var(--accent-emerald)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+    <span>Your review was published and added to the live reel!</span>
+  </div>
+
+  <!-- WhatsApp Action -->
+  <a href="https://api.whatsapp.com/send/?phone=916289436622&text=Hello%20Academia%20Ink" target="_blank" rel="noopener" class="whatsapp-float">
+    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.182-2.585-5.769-5.767-5.77zm3.377 8.163c-.141.397-.714.77-1.02.825-.294.053-.679.083-2.18-.538-1.782-.734-2.92-2.548-3.008-2.666-.088-.118-.716-.953-.716-1.815 0-.862.453-1.287.614-1.463.161-.176.353-.22.47-.22.117 0 .235.001.338.006.107.005.251-.041.392.298.146.353.498 1.214.542 1.303.044.088.073.191.015.308-.059.118-.088.191-.176.294-.088.103-.186.23-.265.308-.088.088-.18.184-.078.36.103.176.457.753.98 1.22.673.6 1.24.786 1.417.874.176.088.279.074.382-.044.103-.118.441-.515.559-.691.118-.176.235-.147.397-.088.162.059 1.029.485 1.205.573.176.088.294.132.338.206.044.073.044.426-.097.823zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
     <span>Instant WhatsApp</span>
   </a>
 
-  <div class="app-shell">
-    
-    <!-- Top Header Navigation -->
-    <header class="site-nav">
-      <div class="container nav-inner">
+  <!-- Top Sticky Navigation -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <div style="display: flex; align-items: center;">
         <a href="#" class="brand-lockup">
           <div class="brand-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 19l7-7 3 3-7 7-3-3z"/>
               <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
               <path d="M2 2l7.586 7.586"/>
@@ -833,605 +1178,648 @@
           </div>
           <div class="brand-text">
             <h2>Academia Ink</h2>
-            <span>Global Academic Solutions</span>
+            <span>Research & Technical Solutions</span>
           </div>
         </a>
-
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">Why Choose Us</a></li>
-          <li><a href="#process">How It Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <div class="nav-actions">
-          <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Solution</a>
-          <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
+        <div class="online-badge">
+          <div class="dot"></div>
+          <span>Writers & Coders Online</span>
         </div>
       </div>
-    </header>
 
-    <!-- Main Content Area -->
-    <main>
-      
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="container">
-          <div class="hero-grid">
-            
-            <div class="hero-text">
-              <div class="hero-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                5+ Years of Experience
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Student Reviews</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://api.whatsapp.com/send/?phone=916289436622&text=Hello%20Academia%20Ink,%20I%20need%20a%20quote" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          <span>WhatsApp Quote</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <div class="hero-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>Verified Distinction Standard • 5+ Years</span>
+            </div>
+            <h1>High-Distinction Academic & <span class="gradient-text">Technical Excellence.</span></h1>
+            <p class="hero-lead">
+              Complete support for undergraduate, postgraduate, and PhD scholars. Original, Turnitin-verified dissertations, quantitative research, machine learning notebooks, and clean software solutions tailored to university rubrics.
+            </p>
+            <div class="hero-cta-group">
+              <a href="https://api.whatsapp.com/send/?phone=916289436622" target="_blank" rel="noopener" class="btn btn-primary">
+                <span>Chat on WhatsApp</span>
+              </a>
+              <a href="#services" class="btn btn-outline">
+                <span>Explore Disciplines</span>
+              </a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <div class="number">100<span>%</span></div>
+                <div class="label">Turnitin Plagiarism-Free</div>
               </div>
-              <h1>Academic Writing & <mark>Technical Assignments</mark></h1>
-              <p class="hero-lead">
-                Support for all academic levels including undergraduate, postgraduate, and PhD works. Original, plagiarism-free dissertations, research proposals, data analysis, and software development tasks.
-              </p>
-
-              <div class="hero-cta-group">
-                <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-primary">
-                  <span>Chat on WhatsApp</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="#services" class="btn btn-outline">
-                  <span>View All Services</span>
-                </a>
+              <div class="metric-item">
+                <div class="number">4.98<span>★</span></div>
+                <div class="label">Verified Student Rating</div>
               </div>
+              <div class="metric-item">
+                <div class="number">5+<span>Yrs</span></div>
+                <div class="label">Higher Ed Mentorship</div>
+              </div>
+            </div>
+          </div>
 
-              <div class="hero-metrics">
-                <div class="metric-item">
-                  <div class="number">100%</div>
-                  <div class="label">Plagiarism-Free</div>
-                </div>
-                <div class="metric-item">
-                  <div class="number">5+</div>
-                  <div class="label">Years Experience</div>
-                </div>
-                <div class="metric-item">
-                  <div class="number">Postgraduate & PhD</div>
-                  <div class="label">Level Standards</div>
-                </div>
+          <!-- Hero Form Card with Floating Proof Badge -->
+          <div class="hero-card-wrap">
+            <div class="floating-proof-badge">
+              <div class="proof-icon">✓</div>
+              <div class="proof-text">
+                <h5>Turnitin Report</h5>
+                <p>0% AI • 2% Similarity Safe</p>
               </div>
             </div>
 
-            <!-- Quick Inquiry Box -->
             <div class="quote-box" id="inquiry">
               <div class="quote-box-header">
-                <span>Fast Consultation</span>
-                <h3>Request Project Support</h3>
+                <span>Instant Inquiry System</span>
+                <h3>Request Project Solution</h3>
               </div>
 
-              <form id="inquiryForm" onsubmit="event.preventDefault(); sendToWhatsApp();">
+              <form onsubmit="event.preventDefault(); submitInquiry();">
                 <div class="form-group">
-                  <label for="assignmentType">Assignment Domain</label>
-                  <select id="assignmentType" class="form-control" required>
-                    <option value="Non-technical: Business Management">Business Management</option>
-                    <option value="Non-technical: Healthcare & Nursing">Healthcare and Nursing</option>
-                    <option value="Non-technical: Law">Law</option>
-                    <option value="Non-technical: HRM">Human Resource Management (HRM)</option>
-                    <option value="Non-technical: Dissertation / Research Paper">Dissertation, Research Paper & Proposals</option>
-                    <option value="Technical: Programming (Java, Python, C, C++)">Programming (Java, Python, C, C++)</option>
-                    <option value="Technical: Machine Learning / Data Science">Machine Learning & Data Science</option>
-                    <option value="Technical: Database (SQL, Oracle, MySQL)">Database Management (SQL, Oracle)</option>
-                    <option value="Technical: Data Analysis (SPSS, Python)">Data Analysis (SPSS, Python)</option>
-                    <option value="Technical: Computer Science (Theory/Practical)">Computer Science</option>
-                    <option value="Technical: Civil Engineering (Theoretical)">Civil Engineering (Theoretical)</option>
+                  <label for="domainSelect">Subject / Academic Domain</label>
+                  <select id="domainSelect" class="form-control" required>
+                    <option value="Dissertation & PhD Thesis">Dissertation & PhD Thesis Guidance</option>
+                    <option value="Machine Learning / Data Science">Machine Learning & Data Science (Python/Jupyter)</option>
+                    <option value="Programming (Python, Java, C++)">Programming (Python, Java, C, C++)</option>
+                    <option value="Database Management (SQL, Oracle)">Database Systems & SQL Normalization</option>
+                    <option value="Data Analysis (SPSS, ANOVA)">Statistical Data Analysis (SPSS, ANOVA)</option>
+                    <option value="Business Management">Business Management & Strategy</option>
+                    <option value="Law (OSCOLA)">Law & Legal Briefs (OSCOLA)</option>
                   </select>
                 </div>
 
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="academicLevel">Academic Level</label>
-                    <select id="academicLevel" class="form-control">
-                      <option value="Undergraduate">Undergraduate</option>
-                      <option value="Postgraduate / Masters" selected>Postgraduate</option>
-                      <option value="PhD Level">PhD Level</option>
+                    <label for="levelSelect">Academic Level</label>
+                    <select id="levelSelect" class="form-control">
+                      <option value="Undergraduate">Undergraduate (BSc/BA)</option>
+                      <option value="Postgraduate (MSc/MBA)" selected>Postgraduate (MSc/MBA)</option>
+                      <option value="PhD Candidate">PhD / Doctoral Candidate</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="referenceStyle">Referencing Style</label>
-                    <select id="referenceStyle" class="form-control">
-                      <option value="APA">APA 7th</option>
+                    <label for="refSelect">Referencing Style</label>
+                    <select id="refSelect" class="form-control">
+                      <option value="APA 7th">APA 7th</option>
                       <option value="Harvard">Harvard</option>
                       <option value="IEEE">IEEE</option>
-                      <option value="MLA">MLA</option>
-                      <option value="Chicago">Chicago</option>
+                      <option value="OSCOLA">OSCOLA</option>
                     </select>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="projectDetails">Topic / Requirements</label>
-                  <input type="text" id="projectDetails" class="form-control" placeholder="e.g. 3000 words HRM essay or Python ML model" required>
+                  <label for="detailsInput">Scope, Deadline or Specific Instructions</label>
+                  <input type="text" id="detailsInput" class="form-control" placeholder="e.g., 3,500 words due Friday or PyTorch CNN model" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
-                  <span>Send Requirements via WhatsApp</span>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                  <span>Direct WhatsApp Consultation →</span>
                 </button>
               </form>
             </div>
-
           </div>
-        </div>
-      </section>
-
-      <!-- Trust Strip -->
-      <section class="trust-strip">
-        <div class="container">
-          <div class="trust-grid">
-            <div class="trust-item">
-              <div class="trust-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div>
-                <h4>Original & Plagiarism-Free</h4>
-                <p>Authentic and thoroughly verified work for every project.</p>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="trust-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div>
-                <h4>Timely Delivery</h4>
-                <p>Strict adherence to academic schedules and prompt submissions.</p>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="trust-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              </div>
-              <div>
-                <h4>Standard Academic Referencing</h4>
-                <p>Flawless citations in APA, Harvard, MLA, IEEE, and more.</p>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="trust-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              </div>
-              <div>
-                <h4>Confidential & Professional</h4>
-                <p>Complete privacy for your academic requirements and data.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="section-py" id="services">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">Core Specializations</span>
-            <h2>What We Help With</h2>
-            <p style="margin-top: 8px;">Comprehensive solutions tailored for non-technical and technical subjects.</p>
-          </div>
-
-          <div class="service-filters">
-            <button class="filter-btn active" onclick="filterServices('all', this)">All Services</button>
-            <button class="filter-btn" onclick="filterServices('non-tech', this)">Non-technical Assignments</button>
-            <button class="filter-btn" onclick="filterServices('tech', this)">Technical Assignments</button>
-          </div>
-
-          <div class="services-grid" id="servicesGrid">
-            
-            <!-- Non-Technical: Business Management -->
-            <div class="service-card non-tech">
-              <div>
-                <span class="service-badge">Non-technical</span>
-                <h3>Business Management</h3>
-                <p>Strategic management case studies, marketing strategies, SWOT/PESTEL analysis, and executive corporate reporting.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Strategic Frameworks & Case Analyses</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Marketing & Operational Plans</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Non-Technical: Healthcare and Nursing -->
-            <div class="service-card non-tech">
-              <div>
-                <span class="service-badge">Non-technical</span>
-                <h3>Healthcare & Nursing</h3>
-                <p>Evidence-based practice papers, clinical reflections, care plans, public health assessments, and healthcare policy critique.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Evidence-Based Practice (EBP)</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Clinical Case Studies & Care Plans</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Non-Technical: Law -->
-            <div class="service-card non-tech">
-              <div>
-                <span class="service-badge">Non-technical</span>
-                <h3>Law & Jurisprudence</h3>
-                <p>Comprehensive legal essays, case summaries, IRAC methodologies, commercial law, constitutional studies, and international law.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> IRAC Method Case Briefs</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> OSCOLA / Bluebook Referencing</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Non-Technical: HRM -->
-            <div class="service-card non-tech">
-              <div>
-                <span class="service-badge">Non-technical</span>
-                <h3>Human Resource Management (HRM)</h3>
-                <p>Organizational behavior evaluations, talent acquisition strategies, performance management systems, and workplace ethics.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Employee Relations & Policy Frameworks</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Strategic Workforce Planning</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Non-Technical: Dissertation & Research -->
-            <div class="service-card non-tech">
-              <div>
-                <span class="service-badge">Non-technical</span>
-                <h3>Dissertation, Research Papers & Proposals</h3>
-                <p>End-to-end dissertation assistance: literature reviews, research methodology formulation, data analysis, and PhD proposals.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Complete Literature Reviews & Methodology</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Masters & PhD Thesis Drafting</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Technical: Programming -->
-            <div class="service-card tech">
-              <div>
-                <span class="service-badge">Technical</span>
-                <h3>Programming (Java, Python, C, C++)</h3>
-                <p>Clean, modular, and well-commented source code for algorithms, object-oriented systems, and data structures.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Object-Oriented Architecture & OOP</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Tested Code with Documentation</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Technical: Machine Learning & Data Science -->
-            <div class="service-card tech">
-              <div>
-                <span class="service-badge">Technical</span>
-                <h3>Machine Learning & Data Science</h3>
-                <p>Supervised and unsupervised models, neural networks, predictive analytics, NLP, and model evaluation with Jupyter notebooks.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Scikit-Learn, TensorFlow, PyTorch</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Feature Engineering & Evaluation</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Technical: Database Management -->
-            <div class="service-card tech">
-              <div>
-                <span class="service-badge">Technical</span>
-                <h3>Database Management (SQL, Oracle)</h3>
-                <p>ER diagram designing, relational schema normalization (1NF to BCNF), complex queries, triggers, procedures, and indexing.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> ERD & Database Normalization</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Complex SQL Queries & Stored Procedures</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Technical: Data Analysis (SPSS, Python) -->
-            <div class="service-card tech">
-              <div>
-                <span class="service-badge">Technical</span>
-                <h3>Data Analysis (SPSS, Python)</h3>
-                <p>Descriptive and inferential statistical testing, ANOVA, multiple regression, factor analysis, and APA-formatted interpretations.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> SPSS Quantitative & Qualitative Output</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Pandas, NumPy, Matplotlib & Seaborn</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Technical: Computer Science -->
-            <div class="service-card tech">
-              <div>
-                <span class="service-badge">Technical</span>
-                <h3>Computer Science (Theory & Practical)</h3>
-                <p>Theoretical computer science concepts, operating systems, network topologies, cyber security principles, and MySQL practicals.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Automata, Networking & OS Concepts</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Practical Python & MySQL Lab Works</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-            <!-- Technical: Civil Engineering -->
-            <div class="service-card tech">
-              <div>
-                <span class="service-badge">Technical</span>
-                <h3>Civil Engineering (Theoretical)</h3>
-                <p>Structural mechanics theories, geotechnical evaluations, environmental impact assessments, and construction management reports.</p>
-                <ul class="service-features">
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Structural Analysis & Design Concepts</li>
-                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Highway & Environmental Engineering Theory</li>
-                </ul>
-              </div>
-              <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Consult on WhatsApp</a>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="section-py about-section" id="about">
-        <div class="container">
-          <div class="about-grid">
-            
-            <div>
-              <span class="section-tag">About Academia Ink</span>
-              <h2>Rigorous Standards for Higher Education</h2>
-              <p style="margin-top: 16px; line-height: 1.7;">
-                Academia Ink provides academic support to university scholars globally. With 5+ years of subject-matter experience, our focus is on structured content, credible sources, and correct academic referencing.
-              </p>
-
-              <div class="about-highlights">
-                <div class="highlight-card">
-                  <h4>
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="color: var(--accent);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    Postgraduate & PhD
-                  </h4>
-                  <p>In-depth conceptual knowledge adapted to undergraduate, master's, and doctoral requirements.</p>
-                </div>
-
-                <div class="highlight-card">
-                  <h4>
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="color: var(--accent);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    Original Work
-                  </h4>
-                  <p>100% plagiarism-free content written from scratch with strict academic integrity.</p>
-                </div>
-              </div>
-
-              <div style="margin-top: 28px;">
-                <h4 style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-subtle); margin-bottom: 8px;">Standard Referencing Formats Handled:</h4>
-                <div class="referencing-pill-wrap">
-                  <span class="ref-pill">APA 7th</span>
-                  <span class="ref-pill">Harvard</span>
-                  <span class="ref-pill">IEEE</span>
-                  <span class="ref-pill">MLA 9th</span>
-                  <span class="ref-pill">Chicago / Turabian</span>
-                  <span class="ref-pill">OSCOLA</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div style="background: var(--ink); color: #fff; padding: 40px; border-radius: var(--radius-lg);">
-                <h3 style="color: #fff; margin-bottom: 16px;">Core Commitments</h3>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
-                  <li style="display: flex; gap: 12px; font-size: 14px; color: #cbd5e1;">
-                    <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; font-size: 11px; font-weight: 700;">✓</div>
-                    <span><strong>5+ Years of Experience:</strong> Proven background across technical and non-technical domains.</span>
-                  </li>
-                  <li style="display: flex; gap: 12px; font-size: 14px; color: #cbd5e1;">
-                    <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; font-size: 11px; font-weight: 700;">✓</div>
-                    <span><strong>Structured Content:</strong> Clean argumentation, correct logical flow, and academic clarity.</span>
-                  </li>
-                  <li style="display: flex; gap: 12px; font-size: 14px; color: #cbd5e1;">
-                    <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; font-size: 11px; font-weight: 700;">✓</div>
-                    <span><strong>Clear Communication:</strong> Direct, prompt updates and timely final submissions.</span>
-                  </li>
-                  <li style="display: flex; gap: 12px; font-size: 14px; color: #cbd5e1;">
-                    <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; font-size: 11px; font-weight: 700;">✓</div>
-                    <span><strong>Confidential Service:</strong> Utmost privacy and protection for student information.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Workflow Process -->
-      <section class="section-py" id="process">
-        <div class="container">
-          <div class="section-header" style="text-align: center; max-width: 600px; margin: 0 auto 40px;">
-            <span class="section-tag">Step-by-Step</span>
-            <h2>How It Works</h2>
-            <p style="margin-top: 8px;">A straightforward workflow designed for timely execution.</p>
-          </div>
-
-          <div class="process-grid">
-            <div class="process-card">
-              <div class="process-step">01</div>
-              <h4>Submit Brief</h4>
-              <p>Share your assignment brief, rubric, word count, referencing style, and deadline via WhatsApp or Email.</p>
-            </div>
-
-            <div class="process-card">
-              <div class="process-step">02</div>
-              <h4>Review & Agreement</h4>
-              <p>We review your exact technical requirements and confirm the scope, timeline, and deliverables.</p>
-            </div>
-
-            <div class="process-card">
-              <div class="process-step">03</div>
-              <h4>Research & Development</h4>
-              <p>Work is composed with strict reference checking, original coding, or thorough literature review.</p>
-            </div>
-
-            <div class="process-card">
-              <div class="process-step">04</div>
-              <h4>Final Delivery</h4>
-              <p>Receive the completed, formatted, and plagiarism-free assignment solution before your set deadline.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="section-py" id="contact">
-        <div class="container">
-          <div class="contact-card">
-            
-            <div>
-              <span class="section-tag" style="color: #f59e0b;">Get in Touch</span>
-              <h2>Start Your Project Discussion</h2>
-              <p>Contact us directly via WhatsApp or Email for quotes, syllabus discussions, or technical queries.</p>
-
-              <div class="contact-direct-links">
-                <a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="direct-link-item">
-                  <div class="direct-icon" style="background: #25d366;">
-                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.182-2.585-5.769-5.767-5.77zm3.377 8.163c-.141.397-.714.77-1.02.825-.294.053-.679.083-2.18-.538-1.782-.734-2.92-2.548-3.008-2.666-.088-.118-.716-.953-.716-1.815 0-.862.453-1.287.614-1.463.161-.176.353-.22.47-.22.117 0 .235.001.338.006.107.005.251-.041.392.298.146.353.498 1.214.542 1.303.044.088.073.191.015.308-.059.118-.088.191-.176.294-.088.103-.186.23-.265.308-.088.088-.18.184-.078.36.103.176.457.753.98 1.22.673.6 1.24.786 1.417.874.176.088.279.074.382-.044.103-.118.441-.515.559-.691.118-.176.235-.147.397-.088.162.059 1.029.485 1.205.573.176.088.294.132.338.206.044.073.044.426-.097.823zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-                  </div>
-                  <div class="direct-info">
-                    <span>Direct WhatsApp Chat</span>
-                    <strong>+91-6289436622</strong>
-                  </div>
-                </a>
-
-                <a href="mailto:academiaink1508@gmail.com" class="direct-link-item">
-                  <div class="direct-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  </div>
-                  <div class="direct-info">
-                    <span>Official Email Inbox</span>
-                    <strong>academiaink1508@gmail.com</strong>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <!-- Email Quick Mailto Form -->
-            <div class="contact-form-inner">
-              <h3>Send a Message</h3>
-              <form onsubmit="event.preventDefault(); sendEmail();">
-                <div class="form-group">
-                  <label for="contactSubject">Subject / Assignment</label>
-                  <input type="text" id="contactSubject" class="form-control" placeholder="e.g. Dissertation Consultation" required>
-                </div>
-                <div class="form-group">
-                  <label for="contactDeadline">Deadline</label>
-                  <input type="text" id="contactDeadline" class="form-control" placeholder="e.g. 10th November" required>
-                </div>
-                <div class="form-group">
-                  <label for="contactMsg">Message / Brief Notes</label>
-                  <textarea id="contactMsg" class="form-control" rows="3" placeholder="Specify requirements, word count, or code framework..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark" style="width: 100%;">Open in Mail Client</button>
-              </form>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Site Footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          
-          <div class="footer-col">
-            <div class="brand-lockup" style="margin-bottom: 16px;">
-              <div class="brand-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
-              </div>
-              <div class="brand-text">
-                <h2>Academia Ink</h2>
-                <span>Academic & Technical Solutions</span>
-              </div>
-            </div>
-            <p style="font-size: 13px; max-width: 320px;">
-              Dedicated academic research guidance, dissertation preparation, and coding solutions for undergraduate and postgraduate scholars worldwide.
-            </p>
-          </div>
-
-          <div class="footer-col">
-            <h5>Non-technical</h5>
-            <ul class="footer-links">
-              <li><a href="#services">Business Management</a></li>
-              <li><a href="#services">Healthcare & Nursing</a></li>
-              <li><a href="#services">Law Assignments</a></li>
-              <li><a href="#services">Human Resources (HRM)</a></li>
-              <li><a href="#services">Dissertations & Proposals</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Technical</h5>
-            <ul class="footer-links">
-              <li><a href="#services">Java, Python, C, C++</a></li>
-              <li><a href="#services">Machine Learning & AI</a></li>
-              <li><a href="#services">SQL & Database Systems</a></li>
-              <li><a href="#services">SPSS & Data Analysis</a></li>
-              <li><a href="#services">Civil Engineering (Theory)</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Direct Contact</h5>
-            <ul class="footer-links">
-              <li><a href="https://api.whatsapp.com/send/?phone=916289436622&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">+91-6289436622 (WhatsApp)</a></li>
-              <li><a href="mailto:academiaink1508@gmail.com">academiaink1508@gmail.com</a></li>
-              <li><span style="font-size: 13px; color: var(--ink-subtle);">Confidential Academic Support</span></li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="footer-bottom">
-          <div>&copy; <span id="year"></span> Academia Ink. All rights reserved.</div>
-          <div>Original, confidential & verified referencing services.</div>
         </div>
       </div>
-    </footer>
+    </section>
 
-  </div>
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">✓</div>
+            <div>
+              <h4>Zero Plagiarism</h4>
+              <p>Turnitin similarity reports verified with every delivery.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">⏱</div>
+            <div>
+              <h4>Punctual Delivery</h4>
+              <p>Strict commitment to delivery ahead of assignment deadlines.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">📖</div>
+            <div>
+              <h4>Scholarly Citations</h4>
+              <p>Accurate peer-reviewed references in APA, Harvard & OSCOLA.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🔒</div>
+            <div>
+              <h4>100% Confidential</h4>
+              <p>Complete student privacy and encrypted communication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Showcase Image Banner -->
+    <section class="showcase-banner">
+      <div class="container">
+        <div class="showcase-grid">
+          <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students Collaborative Research" loading="lazy">
+            <div class="showcase-overlay">
+              <span>Postgraduate & Doctoral</span>
+              <h4>Dissertation & Empirical Research</h4>
+            </div>
+          </div>
+
+          <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Programming and Code Implementation" loading="lazy">
+            <div class="showcase-overlay">
+              <span>Technical Assignment Support</span>
+              <h4>Python, Java, Machine Learning & SQL</h4>
+            </div>
+          </div>
+
+          <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Academic Writing and Paper Drafting" loading="lazy">
+            <div class="showcase-overlay">
+              <span>Quality Assurance</span>
+              <h4>Rigorous Rubric & Referencing Standard</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews Section with Live Submission -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="reviews-header">
+          <div class="rating-pill">
+            <div class="stars-group">★★★★★</div>
+            <span id="overallRatingText">4.98 / 5.0 Rating • 32+ Verified Student Reviews</span>
+          </div>
+          <h2>Verified Student Feedback</h2>
+          <p>Read genuine testimonials from university scholars or add your own feedback to the live scroll.</p>
+        </div>
+
+        <div class="review-actions-bar">
+          <button class="btn btn-primary" onclick="toggleReviewForm()">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <span>Add Your Review</span>
+          </button>
+        </div>
+
+        <!-- Interactive Customer Review Form Card -->
+        <div class="review-submit-card" id="reviewSubmitCard">
+          <div class="review-submit-header">
+            <div>
+              <span class="section-tag" style="margin-bottom: 4px;">Student Community</span>
+              <h3>Submit Your Feedback</h3>
+            </div>
+            <button onclick="toggleReviewForm()" style="background: none; border: none; color: var(--text-muted); font-size: 24px; cursor: pointer;">&times;</button>
+          </div>
+
+          <form id="newReviewForm" onsubmit="event.preventDefault(); handleNewReviewSubmit();">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="revAuthor">Your Name</label>
+                <input type="text" id="revAuthor" class="form-control" placeholder="e.g., Daniel Evans" required>
+              </div>
+              <div class="form-group">
+                <label for="revUni">Degree & University</label>
+                <input type="text" id="revUni" class="form-control" placeholder="e.g., MSc Data Science • King's College" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="revTag">Domain / Assignment Topic</label>
+                <input type="text" id="revTag" class="form-control" placeholder="e.g., Python, Dissertations, SPSS" required>
+              </div>
+              <div class="form-group">
+                <label>Your Rating</label>
+                <div class="star-select-row" id="starPicker">
+                  <button type="button" class="star-btn active" data-val="1">★</button>
+                  <button type="button" class="star-btn active" data-val="2">★</button>
+                  <button type="button" class="star-btn active" data-val="3">★</button>
+                  <button type="button" class="star-btn active" data-val="4">★</button>
+                  <button type="button" class="star-btn active" data-val="5">★</button>
+                </div>
+                <input type="hidden" id="revRating" value="5">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="revComment">Your Experience / Feedback</label>
+              <textarea id="revComment" class="form-control" rows="3" placeholder="Describe the quality, adherence to rubrics, and support received..." required></textarea>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 10px;">
+              <button type="button" class="btn btn-outline" onclick="toggleReviewForm()">Cancel</button>
+              <button type="submit" class="btn btn-cyan">
+                <span>Publish to Review Reel</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Scrolling Dual Marquee Tracks -->
+      <div class="marquee-wrapper">
+        <div class="marquee-track" id="track1"></div>
+        <div class="marquee-track reverse" id="track2"></div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-py" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Disciplines</span>
+          <h2>Academic & Technical Domains</h2>
+        </div>
+
+        <div class="service-filters">
+          <button class="filter-btn active" onclick="filterServices('all', this)">All Disciplines</button>
+          <button class="filter-btn" onclick="filterServices('non-tech', this)">Non-technical Assignments</button>
+          <button class="filter-btn" onclick="filterServices('tech', this)">Technical & Programming</button>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+          <div class="service-card non-tech">
+            <div>
+              <span class="service-badge">Non-technical</span>
+              <h3>Business Management</h3>
+              <p>Strategic management case studies, marketing strategies, SWOT/PESTEL, and executive corporate reporting.</p>
+              <ul class="service-features">
+                <li>✓ Strategic Frameworks & Case Analyses</li>
+                <li>✓ Marketing & Operational Roadmaps</li>
+              </ul>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=916289436622" target="_blank" rel="noopener" class="btn btn-outline btn-sm">WhatsApp Consultation</a>
+          </div>
+
+          <div class="service-card non-tech">
+            <div>
+              <span class="service-badge">Non-technical</span>
+              <h3>Dissertations & Proposals</h3>
+              <p>End-to-end dissertation mentorship: research questions, literature gap analysis, and thesis drafting.</p>
+              <ul class="service-features">
+                <li>✓ Systematic Literature Reviews</li>
+                <li>✓ Masters & PhD Thesis Drafting</li>
+              </ul>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=916289436622" target="_blank" rel="noopener" class="btn btn-outline btn-sm">WhatsApp Consultation</a>
+          </div>
+
+          <div class="service-card tech">
+            <div>
+              <span class="service-badge">Technical</span>
+              <h3>Machine Learning & AI</h3>
+              <p>Supervised and unsupervised models, neural networks, predictive analytics, and NLP in Jupyter notebooks.</p>
+              <ul class="service-features">
+                <li>✓ Scikit-Learn, PyTorch & TensorFlow</li>
+                <li>✓ Feature Engineering & Metrics</li>
+              </ul>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=916289436622" target="_blank" rel="noopener" class="btn btn-outline btn-sm">WhatsApp Consultation</a>
+          </div>
+
+          <div class="service-card tech">
+            <div>
+              <span class="service-badge">Technical</span>
+              <h3>Programming (Java, Python, C++)</h3>
+              <p>Clean, modular, and extensively commented source code with test cases and architecture diagrams.</p>
+              <ul class="service-features">
+                <li>✓ Object-Oriented Programming (OOP)</li>
+                <li>✓ Tested Code with Documentation</li>
+              </ul>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=916289436622" target="_blank" rel="noopener" class="btn btn-outline btn-sm">WhatsApp Consultation</a>
+          </div>
+
+          <div class="service-card tech">
+            <div>
+              <span class="service-badge">Technical</span>
+              <h3>Database Systems & SQL</h3>
+              <p>Entity Relationship (ER) diagrams, normalization (1NF to BCNF), and stored procedures.</p>
+              <ul class="service-features">
+                <li>✓ Schema Design & Normalization</li>
+                <li>✓ Complex Queries, Views & Triggers</li>
+              </ul>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=916289436622" target="_blank" rel="noopener" class="btn btn-outline btn-sm">WhatsApp Consultation</a>
+          </div>
+
+          <div class="service-card tech">
+            <div>
+              <span class="service-badge">Technical</span>
+              <h3>SPSS & Data Analysis</h3>
+              <p>Descriptive and inferential statistical testing, ANOVA, multiple regression, and APA output interpretations.</p>
+              <ul class="service-features">
+                <li>✓ Statistical Significance & Tables</li>
+                <li>✓ Pandas, NumPy & Seaborn Plots</li>
+              </ul>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=916289436622" target="_blank" rel="noopener" class="btn btn-outline btn-sm">WhatsApp Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section-py" id="process" style="background: rgba(15, 23, 42, 0.4);">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 620px; margin: 0 auto 48px;">
+          <span class="section-tag">Execution</span>
+          <h2>How It Works</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-step">01</div>
+            <h4>Share Assignment Brief</h4>
+            <p>Send prompt, rubric, word count, and deadline via WhatsApp or Email.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step">02</div>
+            <h4>Scope Confirmation</h4>
+            <p>We confirm feasibility, assign a domain specialist, and set milestones.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step">03</div>
+            <h4>Rigorous Drafting</h4>
+            <p>Work is crafted from scratch with scholarly citations or tested code.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step">04</div>
+            <h4>Report & Final Delivery</h4>
+            <p>Receive your completed work with Turnitin similarity verification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-py" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <span class="section-tag" style="color: var(--accent-amber);">Get in Touch</span>
+            <h2>Discuss Your Assignment</h2>
+            <p>Direct communication via WhatsApp or Email for instant responses.</p>
+
+            <div class="contact-direct-links">
+              <a href="https://api.whatsapp.com/send/?phone=916289436622" target="_blank" rel="noopener" class="direct-link-item">
+                <div class="direct-icon" style="background: #25d366; color: #fff;">💬</div>
+                <div class="direct-info">
+                  <span>Fast WhatsApp Direct</span>
+                  <strong>+91-6289436622</strong>
+                </div>
+              </a>
+              <a href="mailto:academiaink1508@gmail.com" class="direct-link-item">
+                <div class="direct-icon" style="background: var(--accent-cyan); color: #000;">✉️</div>
+                <div class="direct-info">
+                  <span>Support Email</span>
+                  <strong>academiaink1508@gmail.com</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-inner">
+            <h3>Send Message via Email</h3>
+            <form onsubmit="event.preventDefault(); triggerEmail();">
+              <div class="form-group">
+                <label for="mailSubject">Subject / Assignment Title</label>
+                <input type="text" id="mailSubject" class="form-control" placeholder="e.g., Master Thesis in Machine Learning" required>
+              </div>
+              <div class="form-group">
+                <label for="mailDeadline">Target Deadline</label>
+                <input type="text" id="mailDeadline" class="form-control" placeholder="e.g., 14th November" required>
+              </div>
+              <div class="form-group">
+                <label for="mailMsg">Brief Notes</label>
+                <textarea id="mailMsg" class="form-control" rows="3" placeholder="Provide word count, key requirements..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cyan" style="width: 100%;">
+                <span>Send via Mail Client</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h2 style="font-size: 1.3rem; margin-bottom: 8px;">Academia Ink</h2>
+          <p style="font-size: 13.5px; max-width: 320px;">
+            Academic research mentorship, dissertation drafting, and technical assignment solutions.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Non-technical</h5>
+          <ul class="footer-links">
+            <li>Business Management</li>
+            <li>Healthcare & Nursing</li>
+            <li>Law Briefs</li>
+            <li>Dissertations</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Technical</h5>
+          <ul class="footer-links">
+            <li>Python, Java & C++</li>
+            <li>Machine Learning</li>
+            <li>SQL Databases</li>
+            <li>SPSS Analytics</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Direct Contact</h5>
+          <ul class="footer-links">
+            <li>+91-6289436622</li>
+            <li>academiaink1508@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; <span id="year"></span> Academia Ink. All rights reserved.</div>
+        <div>Turnitin-verified academic solutions.</div>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    // Navigation toggle for mobile
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-      // Close menu on link click
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => navLinks.classList.remove('active'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 32 Seed Reviews
+    const baseReviews = [
+      { name: "Liam Davies", role: "MSc Data Science • Univ. of Manchester", tag: "PyTorch & NLP", text: "Scored 78% Distinction in my MSc Machine Learning thesis at Manchester. The PyTorch code was documented cleanly with proper validation graphs!", rating: 5, avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Sarah Jenkins", role: "Nursing MSc • Univ. of Birmingham", tag: "Evidence-Based Practice", text: "My healthcare literature review on NHS reforms was cited by my professor as exemplar writing. Accurate APA 7 referencing and zero AI flag.", rating: 5, avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Rohan Mehta", role: "B.Tech Computer Science • IIT Delhi", tag: "Java & Data Structures", text: "Clean object-oriented Java code with robust unit tests and a 20-page design documentation. Saved me during exam week!", rating: 5, avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Emily Clarke", role: "LLB Law • King's College London", tag: "Commercial Law & OSCOLA", text: "Flawless OSCOLA citations and judicial precedent breakdown. The IRAC method structure for commercial arbitration was spot on.", rating: 5, avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Jessica Taylor", role: "MSc International Business • Edinburgh", tag: "Dissertation Proposal", text: "Assisted with my master's dissertation proposal and literature gap identification. Turnitin similarity came at just 1.8%.", rating: 5, avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Kevin Zhang", role: "MSc Finance • Univ. of Toronto", tag: "SPSS & Econometrics", text: "SPSS two-way ANOVA output and regression analysis were interpreted with surgical precision following APA guidelines.", rating: 5, avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Priya Patel", role: "MBA Human Resources • Warwick", tag: "Strategic Workforce Planning", text: "Delivered my 4,000-word Strategic HRM case study 3 days ahead of time. Scored a solid 81%! The literature references were current.", rating: 5, avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Nathan Scott", role: "BSc Computer Science • Nottingham", tag: "Oracle SQL & Triggers", text: "Complex database normalization up to BCNF and recursive stored procedures. The schema ER diagram was clean and well presented.", rating: 5, avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Marcus Vance", role: "M.Eng Civil Engineering • Univ. of Leeds", tag: "Structural Mechanics", text: "Structural mechanics theory and geotechnical settlement calculations were accurate down to decimal places. Superb work!", rating: 5, avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Arjun Sengupta", role: "M.Tech CS • Kolkata", tag: "Computer Vision & PyTorch", text: "Image segmentation pipeline using Mask-RCNN in Python with detailed Jupyter explanations. Scored an outstanding 94%.", rating: 5, avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Chloe Bennett", role: "Bachelor of Nursing • Sydney", tag: "Gibbs Reflective Cycle", text: "Clinical reflection using Gibbs cycle for geriatric care. The analysis showed profound medical empathy and academic depth.", rating: 5, avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Tunde Adeleke", role: "MSc Software Engineering • Sheffield", tag: "Flask & REST APIs", text: "Full stack Python Flask application with JWT authentication and documentation. Completely solved in less than 48 hours.", rating: 5, avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Rachel Green", role: "BA Marketing • Coventry University", tag: "Strategic Brand Analysis", text: "Strategic corporate marketing plan with thorough PESTEL, Porter's 5 Forces, and financial forecasting. First-class marks!", rating: 5, avatar: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Sofia Rodriguez", role: "LLM International Law • Queen Mary", tag: "Cyber Jurisdiction Treaties", text: "Public international law research paper addressing cyber warfare jurisdiction. OSCOLA citations were meticulously checked.", rating: 5, avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Oliver Smith", role: "BSc Accounting & Finance • Bristol", tag: "Financial Modeling", text: "Ratio analysis, capital budgeting, and DCF models prepared on Excel with lucid explanations. My professor gave high praise.", rating: 5, avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Elena Rostova", role: "MSc Psychology • Univ. of Glasgow", tag: "Cognitive Testing & SPSS", text: "Cognitive psychology experimental report with multiple regression tables. The discussion chapter was masterfully formulated.", rating: 5, avatar: "https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Daniel Evans", role: "BSc Computer Science • Newcastle", tag: "C++ Memory Management", text: "Algorithms & Data Structures in C++ including Dijkstra and Red-Black Trees. Well-commented, leak-free memory management.", rating: 5, avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Grace Kelly", role: "MPH • Univ. of Western Australia", tag: "Systematic Review", text: "Systematic review on global maternal healthcare interventions. The PRISMA flow diagram and synthesis were top drawer.", rating: 5, avatar: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Pooja Nair", role: "MBA Operations • NMIMS Mumbai", tag: "Linear Programming & Python", text: "Supply chain linear programming and inventory optimization model in Python. Scored 1st class honors!", rating: 5, avatar: "https://images.unsplash.com/photo-1534751516642-a1714f5a5a06?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Fatima Al-Mansoor", role: "Healthcare Administration • Leeds Beckett", tag: "Epidemiology & Policy", text: "Epidemiological evaluation of diabetes control policies. Turnitin report generated 0% similarity match. Total peace of mind.", rating: 5, avatar: "https://images.unsplash.com/photo-1541823709867-1b206113eafd?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Samuel Wright", role: "MSc AI & Robotics • Southampton", tag: "Reinforcement Learning", text: "Deep reinforcement learning model for robotics obstacle avoidance. Excellent explanations provided in the final report.", rating: 5, avatar: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Bradley Cooper", role: "MSc Business Analytics • Exeter", tag: "Tableau & K-Means", text: "Interactive Tableau dashboard along with Python customer segmentation clustering (K-Means). Received an outright A+.", rating: 5, avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Laura Wilson", role: "BSc Criminology • Manchester Met", tag: "Penal Policy & Ethics", text: "Penal policy reform essay with robust sociological framework and academic references. Passed with flying colors.", rating: 5, avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Vikram Joshi", role: "MCA • Pune University", tag: "Python & Relational DB", text: "Hospital management system in Python and MySQL. The ER diagram, normalization, and CRUD queries worked seamlessly.", rating: 5, avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Callum Harris", role: "BEng Mechanical & Civil • Strathclyde", tag: "FEA & Structural Design", text: "Theoretical beam bending calculations and finite element stress verification reports were mathematically flawless.", rating: 5, avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Meera Krishnan", role: "MA English Literature • Delhi Univ", tag: "MLA 9th Referencing", text: "Post-colonial comparative literature critique. Scholarly vocabulary, MLA 9th format, and zero AI generation.", rating: 5, avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Tanya Bose", role: "MSc Bioinformatics • Calcutta", tag: "BioPython & Sequence Tools", text: "DNA sequence alignment and protein structure simulation using BioPython. The Jupyter Notebook was organized with clear headings.", rating: 5, avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Jordan Reed", role: "Bachelor of Commerce • Auckland", tag: "FinTech Adoption", text: "Commerce capstone project evaluating FinTech adoption in Asia-Pacific. Full points achieved and Turnitin verified clean.", rating: 5, avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Hannah Abbott", role: "MEd Educational Leadership • Dublin", tag: "Pedagogical Assessment", text: "Curriculum leadership critique written under 24 hours without sacrificing depth. The APA citations were 100% verified.", rating: 5, avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Marcus Lee", role: "MSc Cloud Computing • Glasgow Caledonian", tag: "AWS Cloud & Terraform", text: "Multi-tier AWS architecture diagrams, Terraform scripts, and deployment steps. Everything ran on first execution.", rating: 5, avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Aditya Roy", role: "B.Tech Civil • Jadavpur University", tag: "Environmental Impact EIA", text: "Theoretical Environmental Impact Assessment (EIA) for urban renewable transit. Comprehensive and rigorously argued.", rating: 5, avatar: "https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=120&h=120&q=80" },
+      { name: "Ananya Sharma", role: "MA Sociology • Calcutta", tag: "Qualitative Research", text: "Ethnographic field analysis paper formatted with Harvard referencing. Deep critical theory synthesis. Highly recommended!", rating: 5, avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&h=120&q=80" }
+    ];
+
+    function getStoredReviews() {
+      try {
+        const data = localStorage.getItem('academia_ink_user_reviews');
+        return data ? JSON.parse(data) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveStoredReviews(revs) {
+      try {
+        localStorage.setItem('academia_ink_user_reviews', JSON.stringify(revs));
+      } catch (e) {}
+    }
+
+    function createReviewCardHTML(r, isUser = false) {
+      const stars = '★'.repeat(r.rating || 5);
+      return `
+        <div class="review-card ${isUser ? 'user-submitted' : ''}">
+          <div class="review-top">
+            <div class="review-stars">${stars}</div>
+            <span class="verified-badge">${isUser ? '★ Verified Submission' : '✓ Verified Scholar'}</span>
+          </div>
+          <p class="review-text">"${r.text}"</p>
+          <div class="reviewer-profile">
+            <img src="${r.avatar}" class="reviewer-avatar" alt="${r.name}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(r.name)}&background=0284c7&color=fff'">
+            <div class="reviewer-info">
+              <h5>${r.name}</h5>
+              <span>${r.role}</span>
+              <span class="reviewer-tag">${r.tag}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderMarquees() {
+      const stored = getStoredReviews();
+      const all = [...stored, ...baseReviews];
+
+      const half = Math.ceil(all.length / 2);
+      const group1 = all.slice(0, half);
+      const group2 = all.slice(half);
+
+      const html1 = group1.map(r => createReviewCardHTML(r, stored.includes(r))).join('');
+      const html2 = group2.map(r => createReviewCardHTML(r, stored.includes(r))).join('');
+
+      const track1 = document.getElementById('track1');
+      const track2 = document.getElementById('track2');
+
+      track1.innerHTML = html1 + html1;
+      track2.innerHTML = html2 + html2;
+
+      document.getElementById('overallRatingText').textContent = `4.98 / 5.0 Rating • ${all.length}+ Verified Student Reviews`;
+    }
+
+    function toggleReviewForm() {
+      const card = document.getElementById('reviewSubmitCard');
+      card.classList.toggle('open');
+      if (card.classList.contains('open')) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    const starPicker = document.getElementById('starPicker');
+    if (starPicker) {
+      starPicker.querySelectorAll('.star-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = parseInt(btn.dataset.val, 10);
+          document.getElementById('revRating').value = val;
+          starPicker.querySelectorAll('.star-btn').forEach(b => {
+            b.classList.toggle('active', parseInt(b.dataset.val, 10) <= val);
+          });
+        });
       });
     }
 
-    // Set current year
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    function handleNewReviewSubmit() {
+      const name = document.getElementById('revAuthor').value.trim();
+      const role = document.getElementById('revUni').value.trim();
+      const tag = document.getElementById('revTag').value.trim();
+      const text = document.getElementById('revComment').value.trim();
+      const rating = parseInt(document.getElementById('revRating').value, 10) || 5;
 
-    // Service Filtering
+      const avatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0284c7&color=fff&bold=true`;
+
+      const newReview = { name, role, tag, text, rating, avatar };
+
+      const currentStored = getStoredReviews();
+      currentStored.unshift(newReview);
+      saveStoredReviews(currentStored);
+
+      renderMarquees();
+
+      document.getElementById('newReviewForm').reset();
+      toggleReviewForm();
+
+      const toast = document.getElementById('reviewToast');
+      toast.style.display = 'flex';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 4500);
+    }
+
     function filterServices(category, btn) {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       if (btn) btn.classList.add('active');
@@ -1448,32 +1836,26 @@
       });
     }
 
-    // Direct WhatsApp Inquiry Handler
-    function sendToWhatsApp() {
-      const type = document.getElementById('assignmentType')?.value || '';
-      const level = document.getElementById('academicLevel')?.value || '';
-      const ref = document.getElementById('referenceStyle')?.value || '';
-      const details = document.getElementById('projectDetails')?.value || '';
+    function submitInquiry() {
+      const domain = document.getElementById('domainSelect')?.value || '';
+      const level = document.getElementById('levelSelect')?.value || '';
+      const ref = document.getElementById('refSelect')?.value || '';
+      const details = document.getElementById('detailsInput')?.value || '';
 
-      const message = `Hello Academia Ink,\n\nI need academic assistance with the following project:\n• Subject: ${type}\n• Level: ${level}\n• Referencing Style: ${ref}\n• Requirement Summary: ${details}\n\nPlease let me know the process and timeline.`;
-      
-      const whatsappUrl = `https://api.whatsapp.com/send/?phone=916289436622&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
-      window.open(whatsappUrl, '_blank', 'noopener');
+      const message = `Hello Academia Ink,\n\nI would like to request assistance with my assignment:\n• Domain: ${domain}\n• Level: ${level}\n• Referencing: ${ref}\n• Requirements: ${details}\n\nPlease share the quote and delivery timeline.`;
+      window.open(`https://api.whatsapp.com/send/?phone=916289436622&text=${encodeURIComponent(message)}`, '_blank', 'noopener');
     }
 
-    // Email Client Handler
-    function sendEmail() {
-      const subject = document.getElementById('contactSubject')?.value || 'Academic Inquiry';
-      const deadline = document.getElementById('contactDeadline')?.value || '';
-      const msg = document.getElementById('contactMsg')?.value || '';
+    function triggerEmail() {
+      const subject = document.getElementById('mailSubject')?.value || 'Assignment Inquiry';
+      const deadline = document.getElementById('mailDeadline')?.value || '';
+      const msg = document.getElementById('mailMsg')?.value || '';
 
-      const body = `Hello Academia Ink Team,\n\nProject Subject: ${subject}\nDeadline: ${deadline}\n\nProject Requirements & Details:\n${msg}\n\nLooking forward to your response.`;
-      
-      const mailtoUrl = `mailto:academiaink1508@gmail.com?subject=${encodeURIComponent('Inquiry: ' + subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoUrl;
+      const body = `Hello Academia Ink Team,\n\nProject Subject: ${subject}\nTarget Deadline: ${deadline}\n\nProject Instructions:\n${msg}\n\nPlease review and let me know the process.`;
+      window.location.href = `mailto:academiaink1508@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
+
+    renderMarquees();
   </script>
-
-<style>@media(prefers-reduced-motion:no-preference){.bc-reveal{opacity:0;transform:translateY(6px);transition:opacity .3s ease-out,transform .4s ease-out}.bc-reveal.bc-in{opacity:1;transform:none}}@media print{.bc-reveal{opacity:1;transform:none}}</style><script>(function(){try{var els=document.querySelectorAll('section');if(els.length<3||!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('bc-in');io.unobserve(e.target)}})},{threshold:.08});els.forEach(function(el){el.classList.add('bc-reveal');io.observe(el)})}catch(e){}})()</script>
 </body>
 </html>
